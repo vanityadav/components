@@ -1,0 +1,14 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  width: 100dvw;
+  padding: 2em;
+}
+.select {
+  display: flex;
+  flex-direction: column;
+  width: clamp(240px, 50dvw, 700px);
+  margin-inline: auto;
+  gap: 2em;
+}

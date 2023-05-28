@@ -1,0 +1,177 @@
+:root {
+  --mobile-width: 90%;
+  --desktop-width: 96%;
+
+  --line-height: 24px;
+
+  --hero-color-hover: #2196f3;
+  --hero-color: #1976d2;
+
+  --box-shadow-small: 0 0 0.5em var(--box-shadow-color);
+  --box-shadow-medium: 0 0 1em var(--box-shadow-color);
+  --box-shadow-large: 0 0 1em var(--box-shadow-color);
+
+  --border-radius-small: 0.25em;
+  --border-radius-medium: 0.5em;
+  --border-radius-large: 1em;
+
+  --padding-small: 0.25em;
+  --padding-medium: 0.5em;
+  --padding-large: 1em;
+
+  --hr-line-height: 1px;
+  --vr-line-width: var(--hr-line-height);
+  --line-color: rgba(134, 134, 134, 0.2);
+
+  --border: 1px solid var(--border-color);
+  --border-hover: 1px solid var(--border-color-hover);
+  --border-active: 1px solid var(--border-color-active);
+
+  --input-border: 1px solid var(--input-border-color);
+  --input-border-active: 1px solid var(--input-border-color-active);
+
+  --transition: 0.2s ease;
+
+  --secondary-button-border: 1px solid var(--hero-color);
+  --secondary-button-border-hover: 1px solid var(--hero-color-hover);
+
+  --btn-remove-bg-color: rgb(185, 32, 32);
+  --btn-add-bg-color: rgb(29, 134, 29);
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    color-scheme: light;
+  }
+
+  :root {
+    --bg-color: #ffffff;
+    --secondary-bg-color: rgb(245, 245, 245);
+    --default-bg-color: 255, 255, 255;
+    --infoBox-bg-color: rgb(220, 220, 220);
+
+    --color: black;
+    --secondary-color: rgb(55, 55, 55);
+    --inactive-color: rgb(150, 150, 150);
+
+    --input-border-color: rgb(200, 200, 200);
+    --input-border-color-active: var(--color);
+
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+
+    --border-color: rgb(200, 200, 200);
+    --border-color-hover: rgb(125, 125, 125);
+    --border-color-active: rgb(0, 0, 0);
+
+    --list-card-inactive-color: rgb(100, 100, 100);
+    --list-card-color-hover: rgb(240, 240, 240);
+    --list-card-color-active: rgb(230, 230, 230);
+
+    --skelton-highlight-color: rgb(243, 243, 243) 30% 70%;
+    --skelton-box-shadow: 0 0 1em rgb(248, 248, 248);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  svg:not(svg[data-svg-color="noInvert"]) {
+    filter: invert(100%);
+  }
+
+  :root {
+    --bg-color: rgb(0, 0, 0);
+    --secondary-bg-color: rgb(25, 25, 25);
+    --default-bg-color: 18, 18, 18;
+    --infoBox-bg-color: rgb(42, 42, 42);
+
+    --color: rgb(255, 255, 255);
+    --secondary-color: rgb(200, 200, 200);
+    --inactive-color: rgb(150, 150, 150);
+
+    --input-border-color: rgb(100, 100, 100);
+    --input-border-color-active: var(--color);
+
+    --box-shadow-color: rgba(255, 255, 255, 0.1);
+
+    --border-color: rgb(50, 50, 50);
+    --border-color-hover: rgb(100, 100, 100);
+    --border-color-active: rgb(200, 200, 200);
+
+    --list-card-inactive-color: rgb(170, 170, 170);
+    --list-card-color-hover: rgb(32, 32, 32);
+    --list-card-color-active: rgb(50, 50, 50);
+
+    --skelton-highlight-color: rgb(26, 26, 26) 30% 70%;
+    --skelton-box-shadow: 0 0 1em rgb(30, 30, 30);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+*:not(h1, h2, h3, h4, h5, h6) {
+  font-size: 14px;
+}
+body {
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+svg:not(svg[data-svg-opacity="normal"]) {
+  opacity: 0.6;
+  transition: opacity var(--transition);
+}
+svg:not(svg[data-svg-opacity="normal"]):hover {
+  opacity: 1;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:active {
+  color: inherit;
+}
+a:hover {
+  color: inherit;
+}
+a:visited {
+  color: inherit;
+}
+input {
+  border: var(--input-border);
+  padding: var(--padding-medium);
+  border-radius: var(--border-radius-small);
+  background-color: var(--bg-color);
+  transition: border-color var(--transition);
+}
+input:focus,
+input:active {
+  outline: none;
+  border: var(--input-border-active);
+}
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 0.15em;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 2em;
+  background-color: var(--inactive-color);
+}
+
+@media (-webkit-device-pixel-ratio: 1.5) {
+  *:not(h1, h2, h3, h4, h5, h6) {
+    font-size: 12px !important;
+  }
+}
+
+@media only screen and (max-width: 1600px), (max-aspect-ratio: 1/1) {
+}
