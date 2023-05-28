@@ -10,6 +10,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.select}>
+        <h1>React Select</h1>
         <h4>Options Type</h4>
         <h5>{JSON.stringify(currencies[0])}</h5>
         <h4>Returned value</h4>
