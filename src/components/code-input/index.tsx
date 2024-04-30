@@ -2,7 +2,7 @@
 
 import { InputField } from "../input";
 import { regexFilter, sliceResult } from "@/utils/code-field";
-import { ChangeEvent, ClipboardEvent, useState } from "react";
+import { ChangeEvent, ClipboardEvent, KeyboardEvent, useState } from "react";
 
 type OTPFieldProps = {
   fields?: number;
@@ -62,7 +62,10 @@ const OTPField = ({
     });
   };
 
-  const onKeyDown = (e: KeyboardEvent, currentField: number) => {
+  const onKeyDown = (
+    e: KeyboardEvent<HTMLInputElement>,
+    currentField: number
+  ) => {
     const code = e.key;
     const target = e.target as HTMLInputElement;
     const currentFieldValue = otp[currentField];
